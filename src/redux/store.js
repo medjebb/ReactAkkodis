@@ -1,12 +1,10 @@
-import { combineReducers, createStore } from "redux"
-import todoreducer from "./todoredux"
-
+import { combineReducers, createStore } from "redux";
+import todoReducer from "./todoReducer/reducer";
 
 const rootReducer = combineReducers({
-    todo:todoreducer
+    todo : todoReducer,
 })
 
-const store = createStore(rootReducer,  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
+const store = createStore(rootReducer , window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__())
 
-export default store; 
+export default store;
