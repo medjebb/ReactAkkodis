@@ -19,13 +19,11 @@ class TodoList extends React.Component {
       <div style={{
         margin: "auto",
         textAlign: "center",
-        backgroundColor: "#f8f9fa",
-        padding: "20px",
-        borderRadius: "10px",
-        boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+        padding: "25px",
+        maxWidth: "800px"
       }}>
-        <h2 style={{ color: "#333" }}>Todo List</h2>
-        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "10px" }}>
+        <h2 style={{ color: "#222", fontSize: "24px", marginBottom: "15px" }}>Todo List</h2>
+        <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "15px" }}>
           <input
             type="text"
             value={this.state.newTodo}
@@ -33,26 +31,34 @@ class TodoList extends React.Component {
             placeholder="New Todo"
             style={{
               flex: "1",
-              padding: "8px",
-              borderRadius: "5px",
-              border: "1px solid #ccc",
-              marginRight: "10px",
+              padding: "10px",
+              borderRadius: "8px",
+              border: "1px solid #ddd",
+              outline: "none",
+              fontSize: "16px",
+              transition: "border-color 0.3s ease-in-out",
             }}
+            onFocus={(e) => e.target.style.borderColor = "#28a745"}
+            onBlur={(e) => e.target.style.borderColor = "#ddd"}
           />
           <button 
             onClick={this.handleAddTodo} 
             style={{ 
-              backgroundColor: "#28a745", 
+              backgroundColor: "blue", 
               color: "white", 
               border: "none", 
-              padding: "8px 15px", 
-              borderRadius: "5px", 
-              cursor: "pointer" 
+              padding: "10px 18px", 
+              borderRadius: "8px", 
+              fontSize: "16px",
+              cursor: "pointer",
             }}
+            
           >
             Add
           </button>
         </div>
+     
+      
         {this.props.todos.map((todo, index) => (
           <Todo
             key={index}
