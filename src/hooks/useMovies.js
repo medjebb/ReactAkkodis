@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { moviesFailure, moviesFetched, moviesRequest } from "../redux/moviesRedux/actions"
 import useDispatchedAction from "./useDispatchedAction"
+import { useSelector } from "react-redux";
+import axios from "axios";
 
 const useMovies = () => {
 
@@ -21,3 +23,5 @@ const useMovies = () => {
 
     return moviesData;
 }
+
+export default useMovies;
