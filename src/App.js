@@ -1,18 +1,20 @@
 import React from "react";
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import TodoList from "./components/TodoList";
+import BooksContainer from "./pages/books/BooksContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./pages/layout/layout";
 
-class App extends React.Component {
-  render() {
-    return (
-      <Provider store={store}>
-        <div style={{ display: "flex", justifyContent: "center", marginTop: "50px" }}>
-          <TodoList />
-        </div>
-      </Provider>
-    );
-  }
-}
+const App = () => {
+  return (
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<BooksContainer />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
+  );
+};
 
 export default App;

@@ -1,8 +1,10 @@
 import { combineReducers, createStore } from "redux";
-import todoReducer from "./todoReducer/reducer";
+import booksReducer from "./booksRedux/reducer";
+import moviesReducer from "./moviesRedux/reducer";
 
 const rootReducer = combineReducers({
-    todo : todoReducer,
+     books: booksReducer,
+     movies : moviesReducer
 })
 
 const store = createStore(rootReducer , window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__())

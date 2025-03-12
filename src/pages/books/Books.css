@@ -1,0 +1,24 @@
+.books-container {
+    padding:10px 50px;
+}
+
+.books-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.books-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.books-table th, .books-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.books-table th {
+    background-color: #f2f2f2;
+}
