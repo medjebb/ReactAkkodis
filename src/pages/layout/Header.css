@@ -1,29 +1,39 @@
 .header {
-    background-color: #282c34;
-    padding: 1px 20px;
-    text-align: center;
+  background-color: #282c34;
+  padding: 1px 20px;
+  text-align: center;
 }
 
 .header-title {
-    color: #61dafb;
-    font-size: 2.5em;
+  color: #ffe449;
+  font-size: 2.5em;
 }
 
 .header-nav ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .header-nav li {
-    display: inline;
-    margin: 0 15px;
+  display: inline;
+  margin: 0 15px;
 }
 
 .header-nav a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 .header-nav a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+}
+
+.header-nav a:current {
+  color: #ffe449;
+  text-decoration: none;
+}
+
+.header-nav a.current {
+  color: #ffe449;
+  text-decoration: none;
 }
